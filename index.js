@@ -34,7 +34,7 @@ router.route('/messages')
         }
         db.collection('messages').save(new_message, (err, result) => {
             if (err) return console.log('DB save error POST')
-            console.log('DB save done..' + new_message)
+            console.log('DB save done..' + JSON.stringify(new_message))
             res.end()
         })
     })
